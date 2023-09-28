@@ -15,8 +15,8 @@ rel_dp.uploadData("relational_other_data.json")
 grp_endpoint ="http://192.168.131.1:9999/blazegraph/sparql" #use your Blazegraph service URL + "/sparql"
 grp_dp = TriplestoreDataProcessor()
 grp_dp.setEndpointUrl(grp_endpoint)
-#grp_dp.uploadData("graph_publications.csv")
-#grp_dp.uploadData("graph_other_data.json")
+grp_dp.uploadData("graph_publications.csv")
+grp_dp.uploadData("graph_other_data.json")
 
 # In the next passage, create the query processors for both
 # the databases, using the related classes
@@ -34,10 +34,8 @@ generic.addQueryProcessor(grp_qp)
 
 
 #now you can execute all the methods of the GenericQueryProcessor (use print)
-print(generic.getPublicationInVenue("issn:1588-2861"))
-#for x in generic.getPublicationsPublishedInYear("2016"):
-    #print(x.getIds())
-    
-print(generic.getPublicationsPublishedInYear("2016"))
+#print(generic.getPublicationInVenue("issn:1588-2861"))
 
-print(generic.getDistinctPublisherOfPublications(['doi:10.1007/s11192-018-2705-y', 'doi:10.1080/2157930x.2018.1439293']))
+#print(generic.getPublicationsPublishedInYear("2016"))
+
+#print(generic.getDistinctPublisherOfPublications(['doi:10.1007/s11192-018-2705-y', 'doi:10.1080/2157930x.2018.1439293']))

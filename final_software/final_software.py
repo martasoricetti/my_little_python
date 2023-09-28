@@ -402,13 +402,13 @@ class TriplestoreDataProcessor (TriplestoreProcessor):
             findex = 0
             for x in all_authors:
                 findex += 1
-            df_all_authors_id = pd.DataFrame(columns = ["doi","all_authors_id"], index= range(findex), dtype={"all_authors_id":"string"})
+            df_all_authors_id = pd.DataFrame(columns = ["doi","all_authors_id"], index= range(findex), dtype=str)
             ind =0
             for x in all_authors:
                 df_all_authors_id.iloc[ind] = (x, all_authors[x])
                 ind +=1
-            print(df_all_authors_id)
-            df_all_authors_id
+            #print(df_all_authors_id)
+            #df_all_authors_id
                     
             #statements with authors as subject
             author_internal_id = {}
